@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ifraj Ahmed</title>
+
+    <link rel="shortcut icon" href="/star-solid.svg" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Add some custom styling for the blurred background */
+        .background-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('blob-scene-haikei.png');
+            background-size: cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        /* Center the form container */
+        .contact-form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    
+    <nav class=" flex justify-around items-center mx-auto h-[10vh] bg-slate-300">
+    
+        <div class="font-bold flex items-center text-xl md:text-3xl text-white">
+            <a href="index.html">IFRAJ AHMED </a>
+        </div>
+    
+        <div>
+<a href="index.html">            <button class="btn-custom text-white font-light w-24 h-8 text-sm  md:w-32 lg:h-16 text-xl lg:font-bold">
+    Home
+</button></a>
+        </div>
+    </nav>
+    <!-- Blurred Background -->
+    <div class="background-blur"></div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+        <div class="bg-white p-10 rounded-lg shadow-xl max-w-md w-full">
+
+            <!-- Avatar and Form Heading -->
+            <div class="flex justify-center mb-6">
+                <div class="avatar online">
+                    <div class="w-24 rounded-full">
+                        <img src="/Hero.jpeg" alt="User Avatar">
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-semibold text-center text-[#2965F1] mb-6">Get in Touch!</h2>
+
+            <!-- Form -->
+            <form action="#" method="POST" class="space-y-6">
+
+                <!-- Name Field -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Full Name</span>
+                    </label>
+                    <input type="text" name="name" placeholder="Enter your full name" class="input input-bordered w-full" required>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Email Address</span>
+                    </label>
+                    <input type="email" name="email" placeholder="Enter your email" class="input input-bordered w-full" required>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Your Message</span>
+                    </label>
+                    <textarea name="message" placeholder="Write your message here" class="textarea textarea-bordered w-full h-32" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-control mt-4">
+                    <button type="submit" class="btn btn-primary w-full bg-[#2965F1] hover:bg-[#2959F1] text-white font-semibold">
+                        Send Message
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript to make the page more interactive -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your message has been sent successfully!');
+        });
+    </script>
+
+</body>
+</html>
